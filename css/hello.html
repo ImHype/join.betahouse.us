@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>β-house工作室2015招新</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/index.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/check.js"></script>
+		<style type="text/css">
+			.notice{
+				margin-left: 97px;
+				color: red;
+				font-size: 13px;
+				display: none;
+			}
+		</style>
+	  <script>
+	  	window.onload = function(){
+	  		 var theForm = document.getElementById('theForm');
+				 // console.log(theForm);
+				 var submitBtn = document.getElementById('submit-btn');
+				 theForm.onsubmit= function(e){
+					 if(!check(this)){
+					 	//  有錯誤  不提交表格
+					 	 e.preventDefault();
+					 }else{
+					 	//e.preventDefault();
+					 	console.log('hello');
+					 }
+				 }
+
+				 var pic = document.getElementById('pic');
+				 var oImg = pic.getElementsByTagName('span')[0].getElementsByTagName('img')[0];
+				 var intro = document.getElementById('intro');
+				 var oTitle = intro.getElementsByTagName('header')[0].getElementsByTagName('h2')[0];
+				 var oContent = intro.getElementsByTagName('p')[0];
+				 var imgs = [
+				 						  {imgSrc:'1.jpg',title:'我們的麻祖',content:'我們的學姐漂亮嗎？哈哈，不僅人漂亮，代碼也寫的很漂亮噢，目前就職與阿里巴巴集團'},
+				 						  {imgSrc:'2.jpg',title:'我們的學長',content:'一眼望去，照片的里的好多人已經離開工作室，踏上了社會，他們在這裏留下過最美好的記憶。'},
+				 						  {imgSrc:'3.jpg',title:'我們的活動',content:'真的笑，笑出聲，在工作室的每一天都是充實並且開心的，因爲和一羣有趣的人共事，本身就是一件可遇不可求的事情'},
+				 						  {imgSrc:'4.jpg',title:'我們的大帝',content:'大帝外號的由來，當然是他的鼎鼎大名——李毅，大帝愛好攝影，文藝青年，曾就職網易，目前正在百度做一只程序員。'},
+				 						  {imgSrc:'5.jpg',title:'我們的理想',content:'曾經年少，我們自命不凡，世界的規則都得由我們來敘寫，而如今，可謂十年飲冰，難涼熱血，只是，我們更加認定，只有改變好自己，才能改良這個世界。'},
+				 						  {imgSrc:'6.jpg',title:'我們的力哥',content:'力哥是工作室元老級的人物，beta正是從他們手上開始奠基，慢慢發展，才有了我們現在這樣的一個自由，開放的互聯網愛好者的家'},
+				 						  {imgSrc:'7.jpg',title:'我們的老高',content:'記得也是在參加beta招新的時候，老高說過一句話：搞互联网的人为什么会被觉得苦逼，因为他们是开拓者，革新者，开拓者永远是辛苦的，然而，他們也幸運的走在了時代最前沿的道路上。'},
+				 						  {imgSrc:'8.jpg',title:'我們的夏大大',content:'夏大大有一個很好聽的名字，夏之韻，不知爲何要叫大大，大大很熱心，每週至少都會來和你聊一次天，有時候是微信，有時候是短信。是的，騷年，你又要交週報了。哈哈，夏大大辛苦了。'},
+				 						  {imgSrc:'9.jpg',title:'我們的永鑫大人',content:'工作室有一本書《黑客與畫家》，正是這本書里，我一句話真實的寫照了我們的永鑫:讨人喜欢也是一项需要花费大量时间专心研究才能掌握的技能，并非不能拥有，而是对于IT男来说有别的技能更有意义。'},
+				 						  {imgSrc:'10.jpg',title:'我們的陳夕',content:'很樂觀的一個人，整一天的狀態總是嘻嘻哈哈，共事很好玩，總有趣的事情發生，是個很靠譜設計師。哈哈。'},
+				 						  {imgSrc:'11.jpg',title:'我們的面試',content:'時間真快，曾經坐在電腦前，參加終極面試的我，現在工作室的一年收穫了很多，那時和我分到一組的阿苗童鞋也向朝着理想進了一大步。'},
+				 						  {imgSrc:'12.jpg',title:'我們的阿苗',content:'工作室最近的一個好消息就是，我們的苗苗也通過了阿里巴巴的面試，去年暑假一起在工作室打地鋪的日子，現在想來甚是有趣。'},
+				 						  {imgSrc:'13.jpg',title:'我們的杰哥',content:'堅信php是世界上最好的語言的一個有故事的男人，對工作室的成員極爲熱心，工作之餘專程來學校給我們講解php課程。遊戲愛好者，哈哈。'},
+				 						  {imgSrc:'14.jpg',title:'我們的黑皮和小灰灰',content:'小灰灰的人生哲理繼承了unix的設計哲學，很簡潔，很深刻，開心就好。常拿黑皮開玩笑，說他是單線程阻塞，不過在这纷繁的世界里    我们也许无法改变别人的风格  但自己的风格不应因别人的风格而变得面目全非，不是嗎？單線程就一定比多線程不如嗎？不見得的'},
+				 						  {imgSrc:'15.jpg',title:'我們的betahouse',content:'這張照片大概的工作室成員最齊全的一張了，從工作室創立初，已經有四屆的學長學姐，在這這個大家庭里，一起合作，一起學習，爲更大的成長積蓄着青春能量。And now it\'s your turn.'}
+				 					  ];
+				 var timer = null;
+				 var i = 0;
+				 var  aplTimer = null;
+				 var iSpeed = 50;
+				 oImg.src = 'images/'+imgs[i].imgSrc;
+			 	 oTitle.textContent = imgs[i].title;
+			 	 oContent.textContent = imgs[i].content;
+			 	 i++;
+				 timer = setInterval(function(){
+				 	// console.log(i);
+			 		oImg.src = 'images/'+imgs[i].imgSrc;
+			 		oTitle.textContent = imgs[i].title;
+			 		oContent.textContent = imgs[i].content;
+
+			 		aplTimer = setInterval(function(){
+			 			oImg.style.opacity = (iSpeed++)/100;
+					 		if(iSpeed >= 100){
+					 			clearInterval(aplTimer);
+					 			iSpeed = 50;
+					 			++i;
+						 		if(i >= imgs.length){
+						 			i = 0;
+						 		}
+					 		}
+			 		},30);
+
+				 },10000);
+	  	}
+	  </script>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<span class="icon major"><img src="images/123.png"></span>
+					<h1> <strong>β-house 2015年招新</strong><br />
+					</h1>
+					<p>程序員的正式稱號是SDE。software develop engineer。但其實真正的名字是： Someone Do Everything 。</p>
+					<ul class="actions">
+						<li><a href="#two" class="button scrolly">点此报名</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+					<div class="row 150%">
+						<div id="intro" class="6u 12u$(medium)">
+							<header class="major">
+								<h2></h2>
+							</header>
+							<p>
+
+							</p>
+
+						</div>
+						<div id="pic" class="6u$ 12u$(medium) important(medium)">
+							<span class="image fit">
+								<img src="" alt="">
+							</span>
+						</div>
+						<!-- <audio id="audio" controls="controls" loop="loop">
+							<source src="audio/我们.mp3" type="audio/mpeg">
+							你的瀏覽器不支持audio,請下載新版本的瀏覽器,讓我攜手努力早日進入高速瀏覽器時代。
+						</audio> -->
+						<!-- <div id="lyc">
+
+						</div> -->
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2">
+				<form id="theForm" method="post" action="submit.php" enctype="multipart/form-data">
+				<div class="container">
+					<h3 style="">報名表單</h3>
+					<div class="row 150%">
+							<div class="6u 12u$(medium)">
+								<h4>你的信息</h4>
+								<div class="form-group">
+									<input type="text" name="name" class="form-control" placeholder="姓名：" required >
+									<span class="notice" ><span>姓名请输入2到4个汉字</span></span>
+
+								</div>
+								<div class="form-group">
+									<input type="text" name="number" class="form-control" placeholder="学号：" required  >
+									<span class="notice">请输入正确的学号</span>
+								</div>
+								<div class="form-group">
+									<input type="text" name="phone" class="form-control" placeholder="手机号：" required  >
+									<span class="notice">请输入正确的手机号或短号</span>
+								</div>
+								<div class="form-group">
+									<h4>你的簡介(300字之内)：</h4>
+									<textarea type="text" name="intro" class="form-control" style="height:200px"  required></textarea>
+									<span class="notice">请填写个人简介且不超过300个字符</span>
+								</div>
+								<div class='form-group'>
+									<h6>
+										如有設計或網站作品請上傳,進支持10M之內的zip壓縮文件，文件名以姓名+學號命名
+									</h6>							
+									<input id='upload' type="file" name="work" style="display:none">
+									<button id="upload-btn">上传</button>
+									<div id="filename"></div>
+								</div>
+
+							</div>
+							<div class="6u$ 12u$(medium)">
+								<div class="form-group">
+									<h4>題目一(300字之内)：</h4>
+									<textarea type="text" class="form-control" style="height:200px" name="ques1"  required></textarea>
+									<span class="notice">请填写题目二且不超过300个字符</span>
+								</div>
+								<div class="form-group">
+									<h4>題目二(300字之内)：</h4>
+									<textarea type="text" class="form-control" style="height:200px" name="ques2"  required></textarea>
+									<span class="notice">请填写题目一且不超过300个字符</span>
+								</div>
+							</div>
+
+					</div>
+
+					<hr>
+					<div style="text-align:center;margin-top:20px;">
+						<button id="submit-btn" type="submit">提交</button>
+					</div>
+				</div>
+				</form>
+
+			</section>
+		<!-- Footer -->
+			<section id="footer">
+
+				<ul class="copyright">
+					<li>&copy;    β-house  工作室  2015</li>
+					<br>
+					<li style="border-left:none"><a href="http://betahouse.us" target="_blank">Betahouse首頁</a></li>
+					<li> <a href="http://study.betahouse.us" target="_blank">Betahouse学习</a></li>
+				</ul>
+			</section>
+	</body>
+</html>
